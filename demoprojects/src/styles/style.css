@@ -1,3 +1,31 @@
 .card:empty {
     height: 565px;
 }
+
+.popover-content{
+    display: 'flex';
+    flexDirection: 'column';
+    alignItems: 'center';
+}
+
+.custom-popover {
+    width: 500px;
+    height: 200px;
+}
+
+.popover-header {
+    background-color: #007bff !important;
+    color: #fff !important;
+    padding: 10px !important;
+    text-align: center;
+}
+
+.header-text {
+    font-size: 18px;
+    margin: 0;
+}
+
+.popover-button {
+    margin: 0 auto !important;
+    display: block !important;
+}
