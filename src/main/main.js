@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { withRouter } from "../hooks/useRouter";
 
 const Main = (props) => {
     useEffect(() => {
