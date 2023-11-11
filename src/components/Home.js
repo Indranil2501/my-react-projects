@@ -1,6 +1,6 @@
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Button } from "@mui/material";
+import { Button, CardActions, CardContent } from "@mui/material";
 import MuiAppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -18,8 +18,6 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import Footer from "../layouts/footer";
 import { mainListItems } from "./listItems";
-
-
 
 const drawerWidth = 240;
 
@@ -182,7 +180,25 @@ export default function Home() {
                     height: 200,
                   }}
                 >
-                  {/* <AgGridComponent /> */}
+                  <CardContent>
+                    <Typography
+                      sx={{ fontSize: 14 }}
+                      color="text.secondary"
+                      gutterBottom
+                    >
+                      Ag-Grid functionalities
+                    </Typography>
+                    <Typography variant="h5" component="div">
+                      Ag-Grid
+                    </Typography>
+                    <Typography variant="body2">
+                      All the ag-grid related features available here.
+                      <br />
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small" href="#/AgGrid">Learn More</Button>
+                  </CardActions>
                 </Paper>
               </Grid>
               {/* D3ChartComponent */}
@@ -195,7 +211,25 @@ export default function Home() {
                     height: 200,
                   }}
                 >
-                  {/* <D3ChartComponent /> */}
+                  <CardContent>
+                    <Typography
+                      sx={{ fontSize: 14 }}
+                      color="text.secondary"
+                      gutterBottom
+                    >
+                      D3 Chart functionalities
+                    </Typography>
+                    <Typography variant="h5" component="div">
+                      D3 Chart
+                    </Typography>
+                    <Typography variant="body2">
+                      All the d3-chart related features available here.
+                      <br />
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small" href="#/D3Chart">Learn More</Button>
+                  </CardActions>
                 </Paper>
               </Grid>
               {/* FutureComponents */}

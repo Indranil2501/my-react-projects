@@ -13,19 +13,19 @@ export const mainListItems = (
   <React.Fragment>
     <ListItemButton>
       <ListItemIcon>
-        <DashboardIcon />
+        <DashboardIcon href="" />
       </ListItemIcon>
       <ListItemText primary="Home" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <GridOnIcon />
+        <GridOnIcon  href="#/AgGrid"/>
       </ListItemIcon>
       <ListItemText primary="AG Grid" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <BarChartIcon />
+        <BarChartIcon href="#/D3Chart"/>
       </ListItemIcon>
       <ListItemText primary="D3" />
     </ListItemButton>
