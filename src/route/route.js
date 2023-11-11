@@ -4,6 +4,6 @@ import Unauthorised from '../components/common/unauthorised'
 const MyAppRoutes = (props) => {
     <Routes>
         <Route path="/Unauthorised" element={<Unauthorised />}/>
-        {/* <Route path="/Unauthorised" element={}/> */}
+        {/* <Route path="/Home" element={<PrivateRoute}/> */}
     </Routes>
 }
