@@ -9,6 +9,7 @@ import Login from './components/Login';
 import AgGridPage from './components/AgGridPage';
 import D3ChartPage from './components/D3ChartPage';
 import MuiPage from './components/MuiPage';
+import MuiAutocompletePage from './components/MuiAutocompletePage';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
             <Route path="/aggrid" element={<AgGridPage />} />
             <Route path="/d3chart" element={<D3ChartPage />} />
             <Route path="/mui" element={<MuiPage />} />
+            <Route path="/mui-autocomplete" element={<MuiAutocompletePage />} />
           </Routes>
         </div>
         <Footer />
