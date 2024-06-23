@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   const pages = [
-    { name: 'Contact', path: '/contact' },
-    { name: 'About', path: '/about' },
-    { name: 'Login', path: '/login' },
     { name: 'AgGrid', path: '/aggrid' },
     { name: 'D3Chart', path: '/d3chart' },
     { name: 'MUI', path: '/mui' },
