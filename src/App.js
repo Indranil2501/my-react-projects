@@ -1,19 +1,35 @@
-import { CookiesProvider } from "react-cookie";
-import { Provider } from "react-redux";
-import { persistor, store } from "./store";
-import { PersistGate } from "redux-persist/integration/react";
-import MainContainer from "./main/main-container";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import Contact from './components/Contact';
+import About from './components/About';
+import Login from './components/Login';
+import AgGridPage from './components/AgGridPage';
+import D3ChartPage from './components/D3ChartPage';
+import MuiPage from './components/MuiPage';
 
-function App() {
+const App = () => {
   return (
-    <Provider store={store}>
-      <PersistGate loading={<MainContainer />} persistor={persistor}>
-        <CookiesProvider>
-          <MainContainer />
-        </CookiesProvider>
-      </PersistGate>
-    </Provider>
+    <Router>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <Header />
+        <div style={{ flex: 1 }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/aggrid" element={<AgGridPage />} />
+            <Route path="/d3chart" element={<D3ChartPage />} />
+            <Route path="/mui" element={<MuiPage />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
