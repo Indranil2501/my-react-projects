@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Typography, Box, Autocomplete, TextField, Chip } from '@mui/material';
-import { Link } from 'react-router-dom';
 
 const MuiAutocompletePage = () => {
     const data = [
@@ -139,6 +138,15 @@ const MuiAutocompletePage = () => {
                 return code.toLowerCase().startsWith(searchTerm) || name.toLowerCase().startsWith(searchTerm);
             });
 
+            // Filter options where the search term is contained anywhere within the code or name
+            const containsOptions = options.filter(option => {
+                const { code, name } = extractCodeAndName(option.title);
+                return (
+                    (code.toLowerCase().includes(searchTerm) || name.toLowerCase().includes(searchTerm)) &&
+                    !filteredOptions.includes(option)
+                );
+            });
+
             // Sort filtered options
             const sortedOptions = filteredOptions.sort((a, b) => {
                 const { code: codeA, name: nameA } = extractCodeAndName(a.title);
@@ -156,7 +164,7 @@ const MuiAutocompletePage = () => {
                 return nameA.localeCompare(nameB);
             });
 
-            return sortedOptions;
+            return [...sortedOptions, ...containsOptions];
         } else {
             return options;
         }
