@@ -131,15 +131,21 @@ const MuiAutocompletePage = () => {
     const filterOptions = (options, state) => {
         const searchTerm = state.inputValue.toLowerCase();
 
+        // Filter out already selected items
+        const unselectedOptions = options.filter(option =>
+            !selectedItems.some(selected => selected.title == option.title)
+        );
+
         if (!searchTerm == false) {
-            // Filter options based on search term
-            const filteredOptions = options.filter(option => {
+            const searchTerm = state.inputValue.toLowerCase();
+
+            // Filter unselected options based on search term
+            const filteredOptions = unselectedOptions.filter(option => {
                 const { code, name } = extractCodeAndName(option.title);
                 return code.toLowerCase().startsWith(searchTerm) || name.toLowerCase().startsWith(searchTerm);
             });
 
-            // Filter options where the search term is contained anywhere within the code or name
-            const containsOptions = options.filter(option => {
+            const containsOptions = unselectedOptions.filter(option => {
                 const { code, name } = extractCodeAndName(option.title);
                 return (
                     (code.toLowerCase().includes(searchTerm) || name.toLowerCase().includes(searchTerm)) &&
@@ -164,9 +170,9 @@ const MuiAutocompletePage = () => {
                 return nameA.localeCompare(nameB);
             });
 
-            return [...sortedOptions, ...containsOptions];
+            return [...selectedItems, ...sortedOptions, ...containsOptions];
         } else {
-            return options;
+            return [...selectedItems, ...unselectedOptions];
         }
     };
     return (
