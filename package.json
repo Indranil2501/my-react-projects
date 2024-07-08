@@ -23,6 +23,7 @@
     "react-resizable": "^3.0.5",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
+    "react-window": "^1.8.10",
     "recharts": "^2.9.3",
     "redux-devtools-extension": "^2.13.9",
     "redux-persist": "^6.0.0",
