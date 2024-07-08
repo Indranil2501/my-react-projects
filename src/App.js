@@ -6,10 +6,11 @@ import Home from './components/Home';
 import Contact from './components/Contact';
 import About from './components/About';
 import Login from './components/Login';
-import AgGridPage from './components/AgGridPage';
-import D3ChartPage from './components/D3ChartPage';
-import MuiPage from './components/MuiPage';
-import MuiAutocompletePage from './components/MuiAutocompletePage';
+import AgGridPage from './components/aggrid/AgGridPage';
+import D3ChartPage from './components/d3chart/D3ChartPage';
+import MuiPage from './components/mui/MuiPage';
+import MuiAutocompletePage from './components/mui/MuiAutocompletePage';
+import MuiAutocompleteReactWindowPage from './components/mui/MuiAutocompleteReactWindowPage';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
             <Route path="/d3chart" element={<D3ChartPage />} />
             <Route path="/mui" element={<MuiPage />} />
             <Route path="/mui-autocomplete" element={<MuiAutocompletePage />} />
+            <Route path="/mui-autocomplete-react-window" element={<MuiAutocompleteReactWindowPage />} />
           </Routes>
         </div>
         <Footer />

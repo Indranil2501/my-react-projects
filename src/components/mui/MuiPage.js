@@ -10,8 +10,6 @@ const MuiPage = () => {
     
     return (
         <Box sx={{ p: 3 }}>
-            <Typography variant="h4">MUI Page</Typography>
-            <Typography variant="body1">This is the MUI page content.</Typography>
             <Box sx={{ flexGrow: 1, p: 3 }}>
                 <Grid container spacing={3}>
                     {pages.map((page) => (
