@@ -11,6 +11,7 @@ import D3ChartPage from './components/d3chart/D3ChartPage';
 import MuiPage from './components/mui/MuiPage';
 import MuiAutocompletePage from './components/mui/MuiAutocompletePage';
 import MuiAutocompleteReactWindowPage from './components/mui/MuiAutocompleteReactWindowPage';
+import AppsPage from './components/apps/AppsPage';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/aggrid" element={<AgGridPage />} />
             <Route path="/d3chart" element={<D3ChartPage />} />
+            <Route path="/apps" element={<AppsPage />} />
             <Route path="/mui" element={<MuiPage />} />
             <Route path="/mui-autocomplete" element={<MuiAutocompletePage />} />
             <Route path="/mui-autocomplete-react-window" element={<MuiAutocompleteReactWindowPage />} />

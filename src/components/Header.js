@@ -21,6 +21,9 @@ const Header = () => {
         return 'About Us';
       case '/login':
         return 'Login';
+      case '/apps':
+      case '/calculator':
+          return 'Apps';
       default:
         return '';
     }
@@ -42,6 +45,9 @@ const Header = () => {
         return '/about';
       case '/login':
         return '/login';
+      case '/apps':
+      case '/calculator':
+        return '/apps';
       default:
         return '';
     }

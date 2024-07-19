@@ -7,6 +7,7 @@ const Home = () => {
     { name: 'AgGrid', path: '/aggrid' },
     { name: 'D3Chart', path: '/d3chart' },
     { name: 'MUI', path: '/mui' },
+    { name: 'Apps', path: '/apps' },
   ];
 
   return (
