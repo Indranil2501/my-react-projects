@@ -12,6 +12,7 @@ import MuiPage from './components/mui/MuiPage';
 import MuiAutocompletePage from './components/mui/MuiAutocompletePage';
 import MuiAutocompleteReactWindowPage from './components/mui/MuiAutocompleteReactWindowPage';
 import AppsPage from './components/apps/AppsPage';
+import Calculator from './components/apps/Calculator';
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
             <Route path="/mui" element={<MuiPage />} />
             <Route path="/mui-autocomplete" element={<MuiAutocompletePage />} />
             <Route path="/mui-autocomplete-react-window" element={<MuiAutocompleteReactWindowPage />} />
+            <Route path="/calculator" element={<Calculator />} />
           </Routes>
         </div>
         <Footer />
