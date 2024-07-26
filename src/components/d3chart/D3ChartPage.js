@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Typography, Box, Autocomplete, TextField, Chip, Grid, Paper } from '@mui/material';
+import { Box, Grid, Paper, Typography } from '@mui/material';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const D3ChartPage = () => {

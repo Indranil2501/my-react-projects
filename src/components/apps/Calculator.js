@@ -2,6 +2,7 @@ import { faBackspace, faDivide, faEquals, faMinus, faPlus, faTimes } from '@fort
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Box, Button, Container, Grid, TextField } from '@mui/material';
 import React, { useState } from 'react';
+import { evaluate } from 'mathjs';
 
 const Calculator = () => {
   const [display, setDisplay] = useState('');
@@ -11,7 +12,7 @@ const Calculator = () => {
       setDisplay('');
     } else if (value === '=') {
       try {
-        setDisplay(eval(display).toString());
+        setDisplay(evaluate(display).toString());
       } catch {
         setDisplay('Error');
       }

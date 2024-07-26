@@ -133,10 +133,10 @@ const MuiAutocompletePage = () => {
 
         // Filter out already selected items
         const unselectedOptions = options.filter(option =>
-            !selectedItems.some(selected => selected.title == option.title)
+            !selectedItems.some(selected => selected.title === option.title)
         );
 
-        if (!searchTerm == false) {
+        if (!searchTerm === false) {
             const searchTerm = state.inputValue.toLowerCase();
 
             // Filter unselected options based on search term
