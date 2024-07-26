@@ -8,6 +8,7 @@ const Home = () => {
     { name: 'D3Chart', path: '/d3chart' },
     { name: 'MUI', path: '/mui' },
     { name: 'Apps', path: '/apps' },
+    { name: 'Demos', path: '/demo' },
   ];
 
   return (

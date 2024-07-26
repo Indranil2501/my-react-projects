@@ -1,18 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import Contact from './components/Contact';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import About from './components/About';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Home from './components/Home';
 import Login from './components/Login';
 import AgGridPage from './components/aggrid/AgGridPage';
-import D3ChartPage from './components/d3chart/D3ChartPage';
-import MuiPage from './components/mui/MuiPage';
-import MuiAutocompletePage from './components/mui/MuiAutocompletePage';
-import MuiAutocompleteReactWindowPage from './components/mui/MuiAutocompleteReactWindowPage';
 import AppsPage from './components/apps/AppsPage';
 import Calculator from './components/apps/Calculator';
+import D3ChartPage from './components/d3chart/D3ChartPage';
+import DemoPage from './components/demo/DemoPage';
+import Reactstrap from './components/demo/Reactstrap';
+import MuiAutocompletePage from './components/mui/MuiAutocompletePage';
+import MuiAutocompleteReactWindowPage from './components/mui/MuiAutocompleteReactWindowPage';
+import MuiPage from './components/mui/MuiPage';
 
 const App = () => {
   return (
@@ -32,6 +34,8 @@ const App = () => {
             <Route path="/mui-autocomplete" element={<MuiAutocompletePage />} />
             <Route path="/mui-autocomplete-react-window" element={<MuiAutocompleteReactWindowPage />} />
             <Route path="/calculator" element={<Calculator />} />
+            <Route path="/demo" element={<DemoPage />} />
+            <Route path="/reactstrap" element={<Reactstrap />} />
           </Routes>
         </div>
         <Footer />

@@ -11,10 +11,16 @@ const Header = () => {
         return 'Ag-Grid';
       case '/d3chart':
         return 'D3Chart';
+      case '/lineChart':
+        return 'D3Chart | Line chart';
+      case '/barChart':
+        return 'D3Chart | Bar chart';
       case '/mui':
-      case '/mui-autocomplete':
-      case '/mui-autocomplete-react-window':
         return 'MUI';
+      case '/mui-autocomplete':
+        return 'MUI | Autocomplete';
+      case '/mui-autocomplete-react-window':
+        return 'MUI | Autocomplete with huge data';
       case '/contact':
         return 'Contact Us';
       case '/about':
@@ -22,8 +28,9 @@ const Header = () => {
       case '/login':
         return 'Login';
       case '/apps':
+        return 'Apps';
       case '/calculator':
-          return 'Apps';
+        return 'Apps | Calculator';
       default:
         return '';
     }
@@ -34,6 +41,8 @@ const Header = () => {
       case '/aggrid':
         return '/aggrid';
       case '/d3chart':
+      case '/lineChart':
+      case '/barChart':
         return '/d3chart';
       case '/mui':
       case '/mui-autocomplete':

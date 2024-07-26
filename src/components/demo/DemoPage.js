@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { Typography, Box, Autocomplete, TextField, Chip, Grid, Paper } from '@mui/material';
+import { Box, Grid, Paper, Typography } from '@mui/material';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-const D3ChartPage = () => {
+const DemoPage = () => {
     const pages = [
-        { name: 'Line Chart', path: '/lineChart' },
-        { name: 'Bar Chart', path: '/barChart' }
+        { name: 'Custom Reactstrap Modal', path: '/reactstrap' }
       ];
     
     return (
@@ -27,4 +26,4 @@ const D3ChartPage = () => {
     );
 };
 
-export default D3ChartPage;
+export default DemoPage;
