@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 const D3ChartPage = () => {
     const pages = [
         { name: 'Line Chart', path: '/lineChart' },
-        { name: 'Bar Chart', path: '/barChart' }
+        { name: 'Bar Chart', path: '/barChart' },
+        { name: 'Area Chart', path: '/areaChart' }
       ];
     
     return (

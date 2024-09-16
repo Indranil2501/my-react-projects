@@ -9,14 +9,15 @@ import Login from './components/Login';
 import AgGridPage from './components/aggrid/AgGridPage';
 import AppsPage from './components/apps/AppsPage';
 import Calculator from './components/apps/Calculator';
+import AreaChart from './components/d3chart/AreaChart';
+import BarChart from './components/d3chart/BarChart';
 import D3ChartPage from './components/d3chart/D3ChartPage';
+import LineChart from './components/d3chart/LineChart';
 import DemoPage from './components/demo/DemoPage';
 import Reactstrap from './components/demo/Reactstrap';
 import MuiAutocompletePage from './components/mui/MuiAutocompletePage';
 import MuiAutocompleteReactWindowPage from './components/mui/MuiAutocompleteReactWindowPage';
 import MuiPage from './components/mui/MuiPage';
-import BarChart from './components/d3chart/BarChart';
-import LineChart from './components/d3chart/LineChart';
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
             <Route path="/reactstrap" element={<Reactstrap />} />
             <Route path="/lineChart" element={<LineChart />} />
             <Route path="/barChart" element={<BarChart />} />
+            <Route path="/areaChart" element={<AreaChart />} />
           </Routes>
         </div>
         <Footer />
