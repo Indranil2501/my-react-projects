@@ -15,6 +15,8 @@ import Reactstrap from './components/demo/Reactstrap';
 import MuiAutocompletePage from './components/mui/MuiAutocompletePage';
 import MuiAutocompleteReactWindowPage from './components/mui/MuiAutocompleteReactWindowPage';
 import MuiPage from './components/mui/MuiPage';
+import BarChart from './components/d3chart/BarChart';
+import LineChart from './components/d3chart/LineChart';
 
 const App = () => {
   return (
@@ -36,6 +38,8 @@ const App = () => {
             <Route path="/calculator" element={<Calculator />} />
             <Route path="/demo" element={<DemoPage />} />
             <Route path="/reactstrap" element={<Reactstrap />} />
+            <Route path="/lineChart" element={<LineChart />} />
+            <Route path="/barChart" element={<BarChart />} />
           </Routes>
         </div>
         <Footer />
