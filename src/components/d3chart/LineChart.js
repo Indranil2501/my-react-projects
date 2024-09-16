@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 
 const LineChart = () => {
+  const chartId = 'lineChart';
   const svgRef = useRef();
 
   useEffect(() => {
@@ -15,7 +16,7 @@ const LineChart = () => {
     const colors = ['#4CAF50', '#FF5722', '#3F51B5'];
     const categories = ['Linedown', 'P1', 'P2', 'P3'];
     
-    const width = 500;
+    const width = window.screen.width - document.getElementById(chartId).clientWidth;
     const height = 300;
     const margin = { top: 30, right: 30, bottom: 50, left: 60 };
 
@@ -89,7 +90,7 @@ const LineChart = () => {
   }, []);
 
   return (
-    <svg ref={svgRef}></svg>
+    <svg id={chartId} ref={svgRef}></svg>
   );
 };
 

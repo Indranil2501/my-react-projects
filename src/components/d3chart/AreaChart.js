@@ -14,7 +14,7 @@ const AreaChart = () => {
 
     const colors = ["#ff8c00", "#6b486b", "#a05d56"];
     const margin = { top: 20, right: 30, bottom: 30, left: 40 };
-    const width = 500 - margin.left - margin.right;
+    const width = 1200 - margin.left - margin.right;
     const height = 300 - margin.top - margin.bottom;
 
     // Clear previous chart
