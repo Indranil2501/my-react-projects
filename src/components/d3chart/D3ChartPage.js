@@ -6,7 +6,8 @@ const D3ChartPage = () => {
     const pages = [
         { name: 'Line Chart', path: '/lineChart' },
         { name: 'Bar Chart', path: '/barChart' },
-        { name: 'Area Chart', path: '/areaChart' }
+        { name: 'Area Chart', path: '/areaChart' },
+        { name: 'Stacked Bar Chart', path: '/stackedBarChart' }
       ];
     
     return (

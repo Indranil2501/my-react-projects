@@ -11,6 +11,7 @@ import AppsPage from './components/apps/AppsPage';
 import Calculator from './components/apps/Calculator';
 import AreaChart from './components/d3chart/AreaChart';
 import BarChart from './components/d3chart/BarChart';
+import StackedBarChart from './components/d3chart/StackedBarChart';
 import D3ChartPage from './components/d3chart/D3ChartPage';
 import LineChart from './components/d3chart/LineChart';
 import DemoPage from './components/demo/DemoPage';
@@ -42,6 +43,7 @@ const App = () => {
             <Route path="/lineChart" element={<LineChart />} />
             <Route path="/barChart" element={<BarChart />} />
             <Route path="/areaChart" element={<AreaChart />} />
+            <Route path="/stackedBarChart" element={<StackedBarChart />} />
           </Routes>
         </div>
         <Footer />

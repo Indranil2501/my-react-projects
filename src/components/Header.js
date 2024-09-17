@@ -16,7 +16,9 @@ const Header = () => {
       case '/barChart':
         return 'D3Chart | Bar chart';
       case '/areaChart':
-          return 'D3Chart | Area chart';
+        return 'D3Chart | Area chart';
+      case '/stackedBarChart':
+        return 'D3Chart | Stacked Bar chart';
       case '/mui':
         return 'MUI';
       case '/mui-autocomplete':
@@ -46,6 +48,7 @@ const Header = () => {
       case '/lineChart':
       case '/barChart':
       case '/areaChart':
+      case '/stackedBarChart':
         return '/d3chart';
       case '/mui':
       case '/mui-autocomplete':
