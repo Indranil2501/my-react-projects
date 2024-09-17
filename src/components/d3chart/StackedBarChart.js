@@ -6,7 +6,7 @@ const StackedBarChart = () => {
 
     // Sample data for the stacked bar chart
     const data = [
-        { Title: "Past Due", Linedown: "0", P1: "1", P2: "8" },
+        { Title: "Past Due", Linedown: "12", P1: "1", P2: "8" },
         { Title: "Today", Linedown: "7", P1: "0", P2: "0" },
         { Title: "Next Day", Linedown: "0", P1: "7", P2: "0" },
         { Title: "2+ Days", Linedown: "0", P1: "9", P2: "13" },
@@ -77,6 +77,7 @@ const StackedBarChart = () => {
             .data(stackedData)
             .enter()
             .append("g")
+            .attr("class", (d) => `bar-group ${d.key}`)  // Add class for each group
             .attr("fill", (d) => colors[d.key]);
 
         const bars = barsGroup.selectAll("rect")
@@ -113,16 +114,27 @@ const StackedBarChart = () => {
             .attr("transform", "rotate(-90)")
             .text("Shortages");
 
+        // Create the legend
         const legend = svg.selectAll(".legend")
             .data(Object.keys(colors))
             .enter()
             .append("g")
+            .attr("class", "legend")
             .attr("transform", (d, i) => `translate(${i * 100 + margin.left}, ${height - 60})`)
             .on("mouseover", (event, key) => {
-                bars.attr("opacity", (d) => d.data[key] > 0 ? 1 : 0.1);
+                // On mouseover, highlight bars of the same key and blur others
+                svg.selectAll(".bar-group").each(function () {
+                    const barGroup = d3.select(this);
+                    barGroup.selectAll("rect")
+                        .attr("opacity", function (d) {
+                            // Highlight bars of the same key, blur others
+                            return barGroup.attr("class").includes(key) ? 1 : 0.1;
+                        });
+                });
             })
             .on("mouseout", () => {
-                bars.attr("opacity", 1); // Reset opacity on mouseout
+                // Reset opacity on mouseout
+                bars.attr("opacity", 1);
             });
 
         legend.append("rect")
