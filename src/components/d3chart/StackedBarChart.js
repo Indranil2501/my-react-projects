@@ -47,7 +47,7 @@ const StackedBarChart = () => {
 
         const yScale = d3
             .scaleLinear()
-            .domain([0, maxTotal])
+            .domain([0, maxTotal * 1.1])
             .range([height - margin.bottom, margin.top]);
 
         const stackGenerator = d3.stack().keys(["Linedown", "P1", "P2"]);
@@ -115,12 +115,13 @@ const StackedBarChart = () => {
             .text("Shortages");
 
         // Create the legend
+        const legendXOffset = (width - Object.keys(colors).length * 100) / 2;
         const legend = svg.selectAll(".legend")
             .data(Object.keys(colors))
             .enter()
             .append("g")
             .attr("class", "legend")
-            .attr("transform", (d, i) => `translate(${i * 100 + margin.left}, ${height - 60})`)
+            .attr("transform", (d, i) => `translate(${i * 100 + legendXOffset}, ${height - 60})`)
             .on("mouseover", (event, key) => {
                 // On mouseover, highlight bars of the same key and blur others
                 svg.selectAll(".bar-group").each(function () {
