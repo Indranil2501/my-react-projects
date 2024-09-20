@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const AppsPage = () => {
     const pages = [
         { name: 'Calculator', path: '/calculator' },
-        { name: 'Quiz', path: '/apps' },
+        { name: 'Quiz', path: '/quiz' },
         { name: 'Note', path: '/note' },
         { name: 'Stopwatch', path: '/apps' },
         { name: 'Weather', path: '/apps' },

@@ -10,6 +10,7 @@ import AgGridPage from './components/aggrid/AgGridPage';
 import AppsPage from './components/apps/AppsPage';
 import Calculator from './components/apps/Calculator';
 import Note from './components/apps/note/Note';
+import Quiz from './components/apps/Quiz';
 import AreaChart from './components/d3chart/AreaChart';
 import BarChart from './components/d3chart/BarChart';
 import D3ChartPage from './components/d3chart/D3ChartPage';
@@ -40,6 +41,7 @@ const App = () => {
             <Route path="/mui-autocomplete-react-window" element={<MuiAutocompleteReactWindowPage />} />
             <Route path="/calculator" element={<Calculator />} />
             <Route path="/note" element={<Note />} />
+            <Route path="/quiz" element={<Quiz />} />
             <Route path="/demo" element={<DemoPage />} />
             <Route path="/reactstrap" element={<Reactstrap />} />
             <Route path="/lineChart" element={<LineChart />} />

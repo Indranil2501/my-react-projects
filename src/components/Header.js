@@ -37,6 +37,8 @@ const Header = () => {
         return 'Apps | Calculator';
       case '/note':
         return 'Apps | Note';
+      case '/quiz':
+        return 'Apps | Quiz';
       default:
         return '';
     }
@@ -63,6 +65,7 @@ const Header = () => {
       case '/login':
         return '/login';
       case '/apps':
+      case '/quiz':
       case '/calculator':
       case '/note':
         return '/apps';
