@@ -9,11 +9,12 @@ import Login from './components/Login';
 import AgGridPage from './components/aggrid/AgGridPage';
 import AppsPage from './components/apps/AppsPage';
 import Calculator from './components/apps/Calculator';
+import Note from './components/apps/note/Note';
 import AreaChart from './components/d3chart/AreaChart';
 import BarChart from './components/d3chart/BarChart';
-import StackedBarChart from './components/d3chart/StackedBarChart';
 import D3ChartPage from './components/d3chart/D3ChartPage';
 import LineChart from './components/d3chart/LineChart';
+import StackedBarChart from './components/d3chart/StackedBarChart';
 import DemoPage from './components/demo/DemoPage';
 import Reactstrap from './components/demo/Reactstrap';
 import MuiAutocompletePage from './components/mui/MuiAutocompletePage';
@@ -38,6 +39,7 @@ const App = () => {
             <Route path="/mui-autocomplete" element={<MuiAutocompletePage />} />
             <Route path="/mui-autocomplete-react-window" element={<MuiAutocompleteReactWindowPage />} />
             <Route path="/calculator" element={<Calculator />} />
+            <Route path="/note" element={<Note />} />
             <Route path="/demo" element={<DemoPage />} />
             <Route path="/reactstrap" element={<Reactstrap />} />
             <Route path="/lineChart" element={<LineChart />} />

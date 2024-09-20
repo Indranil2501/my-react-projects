@@ -6,7 +6,7 @@ const AppsPage = () => {
     const pages = [
         { name: 'Calculator', path: '/calculator' },
         { name: 'Quiz', path: '/apps' },
-        { name: 'Note', path: '/apps' },
+        { name: 'Note', path: '/note' },
         { name: 'Stopwatch', path: '/apps' },
         { name: 'Weather', path: '/apps' },
         { name: 'Chess', path: '/apps' },
